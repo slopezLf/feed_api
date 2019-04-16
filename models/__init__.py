@@ -1,2 +1,2 @@
-from base import *
-from post import *
+from .base import *
+from .post import *

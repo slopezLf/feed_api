@@ -4,7 +4,7 @@ from flask import Flask
 from flask_restful import Api
 
 from resources import Feed, SinglePost
-from models.base import init_db, db_session
+from models.base import db_session
 
 app = Flask(__name__)
 api = Api(app)
@@ -17,5 +17,4 @@ api.add_resource(Feed, '/feed')
 api.add_resource(SinglePost, '/feed/<string:post_id>')
 
 if __name__ == '__main__':
-    init_db()
     app.run(debug=True)
