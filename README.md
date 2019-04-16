@@ -1,8 +1,8 @@
-Requirements:
+##Requirements:
 - Python 2.7
 - mySql 5.7+
 
-To run the app follow these directions:
+###To run the app follow these directions:
 
 1. Clone the github repo (git clone https://github.com/slopezLf/feed_api).
 2. cd into the appropriate directory (cd feed_api).
