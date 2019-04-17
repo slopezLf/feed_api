@@ -14,7 +14,7 @@ def shutdown_session(exception=None):
     db_session.remove()
 
 api.add_resource(Feed, '/feed')
-api.add_resource(SinglePost, '/feed/<string:post_id>')
+api.add_resource(SinglePost, '/feed/<int:post_id>')
 
 if __name__ == '__main__':
     app.run(debug=True)

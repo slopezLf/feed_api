@@ -1,0 +1,25 @@
+# Get all posts
+curl http://127.0.0.1:5000/feed -v
+
+# Create new post
+curl http://127.0.0.1:5000/feed \
+--header "Content-Type: application/json" \
+--request POST \
+--data '{"title":"Post title", "body":"post body text text text."}' \
+-v
+
+# Get a single post 
+curl http://127.0.0.1:5000/feed/<post_id> -v
+
+# Edit a post
+curl http://127.0.0.1:5000/feed/<post_id> \
+--header "Content-Type: application/json" \
+--request PUT \
+--data '{"title":"Edited post", "body":"Edited post body more text."}' \
+-v 
+
+# Delete a post 
+curl http://127.0.0.1:5000/feed/<post_id> \
+--request DELETE \
+-v
+
