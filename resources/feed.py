@@ -3,18 +3,8 @@ import json
 from flask import request
 from flask_restful import Resource, abort, marshal_with, fields
 
-from models import Post, db_session
+from models import Post, db_session, Comment
 
-FEED = {
-    'post1':{
-        'title': 'first post',
-        'body': 'body first post body'
-    },
-    'post2':{
-        'title': 'second post',
-        'body': 'body second post body'
-    },
-}
 
 post_fields = {
     'id': fields.Integer,
@@ -59,7 +49,6 @@ class SinglePost(Resource):
         payload = request.get_json()
         post.title = payload['title']
         post.body = payload['body']
-
         db_session.commit()
 
         return post, 201

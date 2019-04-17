@@ -17,4 +17,5 @@ Base.query = db_session.query_property()
 
 def init_db():
 	from .post import Post
+	from .comment import Comment
 	Base.metadata.create_all(bind=engine)
