@@ -5,17 +5,6 @@ from flask_restful import Resource, abort, marshal_with, fields
 
 from models import Post, db_session
 
-FEED = {
-    'post1':{
-        'title': 'first post',
-        'body': 'body first post body'
-    },
-    'post2':{
-        'title': 'second post',
-        'body': 'body second post body'
-    },
-}
-
 post_fields = {
     'id': fields.Integer,
     'title': fields.String,
